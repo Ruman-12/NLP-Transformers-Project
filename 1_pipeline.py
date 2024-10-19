@@ -24,23 +24,23 @@ def index():
 
         if task == 'sentiment':
             sent = sentiment_pipeline(user_input)
-            return render_template('1_pipeline.html', sent=sent)
+            return render_template('index.html', sent=sent)
         elif task == 'generation':
             gen = generation_pipeline(user_input)
-            return render_template('1_pipeline.html', gen=gen)
+            return render_template('index.html', gen=gen)
         elif task == 'translation':
             trans = translation_pipeline(user_input)
-            return render_template('1_pipeline.html', trans=trans)
+            return render_template('index.html', trans=trans)
         elif task == 'summarization':
             summ = summarization_pipeline(user_input)
-            return render_template('1_pipeline.html', summ=summ)
+            return render_template('index.html', summ=summ)
         elif task == 'named_entity_recognition':
             ner = NER_pipeline(user_input)
-            return render_template('1_pipeline.html', ner=ner)
+            return render_template('index.html', ner=ner)
 
 
 
-    return render_template('1_pipeline.html')
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
