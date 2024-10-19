@@ -27,39 +27,6 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
-        {% if sent %}
-        <div class="mt-4">
-            <h2>Sentiment analysis:</h2>
-            <p>{{ sent[0].label }}, Score: {{sent[0].score}}</p>
-        </div>
-        {% endif %}
-
-        {% if gen %}
-        <div class="mt-4">
-            <h2>Generated Text: </h2>
-            <p>{{gen[0].generated_text}}</p>
-        </div>
-        {% endif %}
-
-        {% if ner %}
-        <div class="mt-4">
-            <h2>NER</h2>
-            <p>group entity: {{ner[0].entity_group}}, score: {{ner[0].score}}, word: {{ner[0].word}}</p>
-        </div>
-        {% endif %}
-
-        {% if trans %}
-        <div class="mt-4">
-            <h2>translation_text</h2>
-            <p>{{trans[0].translation_text}}</p>
-        </div>
-        {% endif %}
-        {% if summ %}
-        <div class="mt-4">
-            <h2>summarization:</h2>
-            <p>{{summ[0].summary_text}}</p>
-        </div>
-        {% endif %}
-    </div>
+        
 </body>
 </html>
